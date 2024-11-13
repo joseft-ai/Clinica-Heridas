@@ -1,50 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CESS Salud Integral: Brindamos atención especializada en salud con enfoque en heridas, planificación familiar y más, para tu bienestar.">
+    <meta name="description" content="CESS Salud Integral: Atención personalizada en salud, incluyendo heridas, planificación familiar, administración de medicamentos y más.">
     <meta name="keywords" content="salud, atención en salud, heridas, planificación, implante anticonceptivo subdérmico, administración de medicamentos, salud integral, Casanare, Paz de Ariporo">
     <meta name="author" content="CESS Salud Integral">
     <title>CESS Salud Integral | Paz de Ariporo, Casanare</title>
     <style>
-        /* Reset general */
+        /* Estilos previos (sin cambios) */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f9f9f9;
             color: #333;
         }
-
         header {
-            background-color: #006400; /* Verde fuerte que inspira confianza */
+            background-color: #006400;
             color: white;
             text-align: center;
             padding: 30px 0;
             border-bottom: 5px solid #4CAF50;
         }
-
         header h1 {
             font-size: 40px;
             margin-bottom: 10px;
         }
-
         header p {
             font-size: 18px;
             margin-top: 5px;
         }
-
         nav {
             background-color: #333;
             text-align: center;
             padding: 12px 0;
         }
-
         nav a {
             color: white;
             padding: 12px 20px;
@@ -52,18 +46,15 @@
             font-size: 18px;
             display: inline-block;
         }
-
         nav a:hover {
             background-color: #4CAF50;
             color: white;
         }
-
         .container {
             width: 85%;
             margin: 0 auto;
             padding: 40px 0;
         }
-
         section {
             padding: 30px;
             background-color: white;
@@ -71,35 +62,15 @@
             margin-bottom: 20px;
             border-radius: 8px;
         }
-
         h2 {
             color: #4CAF50;
             font-size: 28px;
             margin-bottom: 15px;
         }
-
         p {
             line-height: 1.6;
             margin-bottom: 20px;
         }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            font-size: 18px;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-        }
-
-        ul li i {
-            margin-right: 10px;
-            color: #4CAF50;
-        }
-
         .cta-button {
             display: inline-block;
             background-color: #4CAF50;
@@ -111,48 +82,9 @@
             transition: background-color 0.3s ease;
             text-align: center;
         }
-
         .cta-button:hover {
             background-color: #45a049;
         }
-
-        .services-cards {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .service-card {
-            background-color: #fff;
-            width: 30%;
-            margin: 15px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .service-card h3 {
-            font-size: 22px;
-            color: #006400;
-            margin-bottom: 10px;
-        }
-
-        .service-card p {
-            font-size: 16px;
-            color: #555;
-        }
-
-        .contact-info {
-            font-size: 18px;
-        }
-
         footer {
             background-color: #333;
             color: white;
@@ -161,38 +93,30 @@
             margin-top: 40px;
         }
 
-        @media (max-width: 768px) {
-            .services-cards {
-                flex-direction: column;
-                align-items: center;
-            }
+        /* Efectos de Hover */
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
 
-            .service-card {
-                width: 80%;
-            }
-
-            header h1 {
-                font-size: 32px;
-            }
-
-            nav a {
-                font-size: 16px;
-                padding: 10px 15px;
-            }
+        /* Botón de Volver al Inicio */
+        #scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 18px;
+            border-radius: 50%;
+            display: none;
+            cursor: pointer;
+        }
+        #scroll-to-top:hover {
+            background-color: #45a049;
         }
     </style>
-<style type="text/css">
-.grande { font-size: 60px; }
-</style>
-<script>
-    // Escribir aqui el código Javascript
-</script>
-<style type="text/css">
-
-</style>
-<script>
-// Escribir aqui el código Javascript
-</script>
 </head>
 <body>
     <header>
@@ -207,6 +131,7 @@
     </nav>
 
     <div class="container">
+        <!-- Sección de Servicios -->
         <section id="servicios">
             <h2>Servicios</h2>
             <p>En **CESS Salud Integral** ofrecemos atención especializada en salud, con un enfoque en el cuidado de heridas, planificación familiar, administración de medicamentos y más. Estos son algunos de nuestros servicios más destacados:</p>
@@ -235,11 +160,13 @@
             <a href="#contacto" class="cta-button">Solicita una consulta</a>
         </section>
 
+        <!-- Sección de Nosotros -->
         <section id="nosotros">
             <h2>Nosotros</h2>
             <p>En **CESS Salud Integral** somos un equipo de profesionales en enfermería y atención en salud comprometidos con el bienestar de nuestros pacientes. Nos especializamos en ofrecer atención personalizada, tanto en el hogar como en la clínica, con el objetivo de mejorar la calidad de vida de quienes confían en nosotros.</p>
         </section>
 
+        <!-- Sección de Contacto -->
         <section id="contacto">
             <h2>Contacto</h2>
             <p>Si necesitas más información o deseas agendar una cita, no dudes en ponerte en contacto con nosotros:</p>
@@ -252,10 +179,34 @@
         </section>
     </div>
 
+    <!-- Botón para volver al inicio -->
+    <button id="scroll-to-top" onclick="scrollToTop()">↑</button>
+
     <footer>
         <p>© 2024 CESS Salud Integral. Todos los derechos reservados.</p>
     </footer>
 
+    <script>
+        // Desplazamiento suave al hacer clic en los enlaces de la navegación
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
+        // Mostrar el botón de volver al inicio cuando se haga scroll
+        window.onscroll = function () {
+            const button = document.getElementById('scroll-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        };
 
-</body></html>
+        // Función para hacer scroll al inicio
+        function scrollToTop() {
+            window.scroll
