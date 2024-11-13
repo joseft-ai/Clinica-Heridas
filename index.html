@@ -8,17 +8,19 @@
     <meta name="author" content="CESS Salud Integral">
     <title>CESS Salud Integral | Paz de Ariporo, Casanare</title>
     <style>
-        /* Estilos previos (sin cambios) */
+        /* Reset general */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f9f9f9;
             color: #333;
         }
+
         header {
             background-color: #006400;
             color: white;
@@ -26,19 +28,23 @@
             padding: 30px 0;
             border-bottom: 5px solid #4CAF50;
         }
+
         header h1 {
             font-size: 40px;
             margin-bottom: 10px;
         }
+
         header p {
             font-size: 18px;
             margin-top: 5px;
         }
+
         nav {
             background-color: #333;
             text-align: center;
             padding: 12px 0;
         }
+
         nav a {
             color: white;
             padding: 12px 20px;
@@ -46,15 +52,18 @@
             font-size: 18px;
             display: inline-block;
         }
+
         nav a:hover {
             background-color: #4CAF50;
             color: white;
         }
+
         .container {
             width: 85%;
             margin: 0 auto;
             padding: 40px 0;
         }
+
         section {
             padding: 30px;
             background-color: white;
@@ -62,15 +71,18 @@
             margin-bottom: 20px;
             border-radius: 8px;
         }
+
         h2 {
             color: #4CAF50;
             font-size: 28px;
             margin-bottom: 15px;
         }
+
         p {
             line-height: 1.6;
             margin-bottom: 20px;
         }
+
         .cta-button {
             display: inline-block;
             background-color: #4CAF50;
@@ -82,9 +94,11 @@
             transition: background-color 0.3s ease;
             text-align: center;
         }
+
         .cta-button:hover {
             background-color: #45a049;
         }
+
         footer {
             background-color: #333;
             color: white;
@@ -113,8 +127,26 @@
             display: none;
             cursor: pointer;
         }
+
         #scroll-to-top:hover {
             background-color: #45a049;
+        }
+
+        /* Diseño responsivo */
+        @media (max-width: 768px) {
+            .service-card {
+                width: 80%;
+                margin: 10px auto;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            nav a {
+                font-size: 16px;
+                padding: 10px 15px;
+            }
         }
     </style>
 </head>
@@ -209,4 +241,11 @@
 
         // Función para hacer scroll al inicio
         function scrollToTop() {
-            window.scroll
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
