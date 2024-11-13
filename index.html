@@ -8,7 +8,7 @@
     <meta name="author" content="CESS Salud Integral">
     <title>CESS Salud Integral | Paz de Ariporo, Casanare</title>
     <style>
-        /* Reset general */
+        /* Reset General */
         * {
             margin: 0;
             padding: 0;
@@ -17,40 +17,44 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
 
         header {
-            background-color: #006400;
+            background: #006400;
             color: white;
+            padding: 40px 0;
             text-align: center;
-            padding: 30px 0;
-            border-bottom: 5px solid #4CAF50;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
             font-size: 40px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         header p {
-            font-size: 18px;
-            margin-top: 5px;
+            font-size: 20px;
         }
 
         nav {
             background-color: #333;
-            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             padding: 12px 0;
         }
 
         nav a {
             color: white;
-            padding: 12px 20px;
+            padding: 14px 20px;
             text-decoration: none;
+            text-transform: uppercase;
             font-size: 18px;
-            display: inline-block;
+            transition: background 0.3s;
         }
 
         nav a:hover {
@@ -59,28 +63,33 @@
         }
 
         .container {
-            width: 85%;
+            width: 90%;
             margin: 0 auto;
-            padding: 40px 0;
+            padding: 50px 0;
         }
 
+        /* Secciones */
         section {
-            padding: 30px;
+            padding: 50px 0;
             background-color: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
-            border-radius: 8px;
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         h2 {
+            font-size: 36px;
             color: #4CAF50;
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-
-        p {
-            line-height: 1.6;
-            margin-bottom: 20px;
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         .cta-button {
@@ -91,41 +100,122 @@
             font-size: 18px;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
             text-align: center;
+            margin-top: 20px;
+            transition: background-color 0.3s;
         }
 
         .cta-button:hover {
             background-color: #45a049;
         }
 
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
+        /* Estilos de las tarjetas de servicio */
+        .services-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
         }
 
-        /* Efectos de Hover */
+        .service-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
-        /* Botón de Volver al Inicio */
+        .service-card h3 {
+            color: #4CAF50;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Estilos Modal de Contacto */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%;
+            border-radius: 8px;
+        }
+
+        .modal-content input, .modal-content textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .modal-content button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .modal-content button:hover {
+            background-color: #45a049;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Botón Scroll al inicio */
         #scroll-to-top {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 30px;
+            right: 30px;
             background-color: #4CAF50;
             color: white;
             border: none;
             padding: 15px 25px;
             font-size: 18px;
             border-radius: 50%;
-            display: none;
             cursor: pointer;
+            display: none;
         }
 
         #scroll-to-top:hover {
@@ -135,22 +225,17 @@
         /* Diseño responsivo */
         @media (max-width: 768px) {
             .service-card {
+                flex-basis: 100%;
+            }
+
+            .modal-content {
                 width: 80%;
-                margin: 10px auto;
-            }
-
-            header h1 {
-                font-size: 32px;
-            }
-
-            nav a {
-                font-size: 16px;
-                padding: 10px 15px;
             }
         }
     </style>
 </head>
 <body>
+
     <header>
         <h1>CESS Salud Integral</h1>
         <p>Atención en salud integral a domicilio y especializada para tu bienestar</p>
@@ -166,7 +251,6 @@
         <!-- Sección de Servicios -->
         <section id="servicios">
             <h2>Servicios</h2>
-            <p>En **CESS Salud Integral** ofrecemos atención especializada en salud, con un enfoque en el cuidado de heridas, planificación familiar, administración de medicamentos y más. Estos son algunos de nuestros servicios más destacados:</p>
             <div class="services-cards">
                 <div class="service-card">
                     <h3>Atención integral de heridas</h3>
@@ -180,19 +264,11 @@
                     <h3>Consultas a domicilio</h3>
                     <p>Brindamos consultas a domicilio para comodidad de nuestros pacientes, con atención personalizada y de calidad.</p>
                 </div>
-                <div class="service-card">
-                    <h3>Administración de medicamentos</h3>
-                    <p>Proporcionamos la administración de medicamentos inyectables y otros tratamientos de salud según las necesidades del paciente.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Atención en salud preventiva</h3>
-                    <p>Ofrecemos servicios de atención preventiva para mejorar la salud general de nuestros pacientes y prevenir enfermedades.</p>
-                </div>
             </div>
             <a href="#contacto" class="cta-button">Solicita una consulta</a>
         </section>
 
-        <!-- Sección de Nosotros -->
+        <!-- Sección Nosotros -->
         <section id="nosotros">
             <h2>Nosotros</h2>
             <p>En **CESS Salud Integral** somos un equipo de profesionales en enfermería y atención en salud comprometidos con el bienestar de nuestros pacientes. Nos especializamos en ofrecer atención personalizada, tanto en el hogar como en la clínica, con el objetivo de mejorar la calidad de vida de quienes confían en nosotros.</p>
@@ -204,48 +280,66 @@
             <p>Si necesitas más información o deseas agendar una cita, no dudes en ponerte en contacto con nosotros:</p>
             <div class="contact-info">
                 <p><strong>Teléfono:</strong> (123) 456-7890</p>
-                <p><strong>Email:</strong> contacto@cesssaludintegral.com</p>
-                <p><strong>Dirección:</strong> Calle 123, Paz de Ariporo, Casanare</p>
+                <p><strong>Correo electrónico:</strong> contacto@cesssalud.com</p>
+                <button onclick="openModal()">Contacta con nosotros</button>
             </div>
-            <a href="mailto:contacto@cesssaludintegral.com" class="cta-button">Envíanos un correo</a>
         </section>
     </div>
 
-    <!-- Botón para volver al inicio -->
+    <!-- Modal de Contacto -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Formulario de Contacto</h3>
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                <textarea id="message" name="message" placeholder="Tu mensaje" rows="4" required></textarea>
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Botón de Scroll al Inicio -->
     <button id="scroll-to-top" onclick="scrollToTop()">↑</button>
 
-    <footer>
-        <p>© 2024 CESS Salud Integral. Todos los derechos reservados.</p>
-    </footer>
-
     <script>
-        // Desplazamiento suave al hacer clic en los enlaces de la navegación
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        // Función para abrir el modal de contacto
+        function openModal() {
+            document.getElementById("contactModal").style.display = "block";
+        }
 
-        // Mostrar el botón de volver al inicio cuando se haga scroll
-        window.onscroll = function () {
-            const button = document.getElementById('scroll-to-top');
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                button.style.display = 'block';
+        // Función para cerrar el modal
+        function closeModal() {
+            document.getElementById("contactModal").style.display = "none";
+        }
+
+        // Función para mostrar el botón de volver arriba cuando se hace scroll
+        window.onscroll = function() {
+            let scrollButton = document.getElementById("scroll-to-top");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollButton.style.display = "block";
             } else {
-                button.style.display = 'none';
+                scrollButton.style.display = "none";
             }
         };
 
-        // Función para hacer scroll al inicio
+        // Función para hacer scroll hacia arriba
         function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        // Animación de las secciones al hacer scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            window.addEventListener('scroll', function() {
+                sections.forEach(section => {
+                    if (section.getBoundingClientRect().top <= window.innerHeight * 0.75) {
+                        section.classList.add('visible');
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
