@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CESS Salud Integral | Atención en salud de calidad, planificación familiar, y cuidado de heridas en Casanare.">
-    <meta name="keywords" content="salud, atención médica, planificación familiar, salud Casanare, cuidado de heridas, JCI">
+    <meta name="description" content="CESS Salud Integral - Servicios de salud de calidad con atención especializada en planificación familiar, tratamiento de heridas, y más.">
+    <meta name="keywords" content="salud, atención médica, planificación familiar, heridas, Casanare, Paz de Ariporo">
     <meta name="author" content="CESS Salud Integral">
     <title>CESS Salud Integral | Paz de Ariporo, Casanare</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
-    <!-- Estilos Avanzados (CSS) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Merriweather:wght@700&display=swap" rel="stylesheet">
     <style>
+        /* Reset general */
         * {
             margin: 0;
             padding: 0;
@@ -20,121 +18,132 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #fafafa;
+            background-color: #f5f5f5; /* Fondo gris claro */
             color: #333;
             line-height: 1.6;
-            transition: background-color 0.3s ease;
         }
 
         header {
-            background-color: #006400;
+            background-color: #4c8c99; /* Azul claro */
             color: white;
-            padding: 80px 0;
             text-align: center;
-            background-image: url('header-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+            padding: 40px 0;
+            border-bottom: 5px solid #66b3a5; /* Verde suave */
         }
 
         header h1 {
+            font-family: 'Merriweather', serif;
             font-size: 50px;
             margin-bottom: 10px;
         }
 
         header p {
-            font-size: 22px;
-            max-width: 800px;
-            margin: 0 auto;
+            font-size: 20px;
         }
 
         nav {
-            background-color: #333;
+            background-color: #006400; /* Verde oscuro */
             text-align: center;
-            padding: 14px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            padding: 12px 0;
         }
 
         nav a {
             color: white;
-            font-size: 18px;
+            padding: 15px 20px;
             text-decoration: none;
-            padding: 14px 20px;
+            font-size: 18px;
             display: inline-block;
-            transition: background-color 0.3s;
         }
 
         nav a:hover {
-            background-color: #4CAF50;
+            background-color: #66b3a5; /* Verde suave */
+            color: white;
         }
 
         .container {
             width: 85%;
-            margin: 50px auto;
+            margin: 0 auto;
+            padding: 40px 0;
         }
 
         section {
-            padding: 50px 0;
-            margin-bottom: 30px;
-            background-color: #fff;
+            padding: 40px;
+            background-color: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
             border-radius: 10px;
-            transition: box-shadow 0.3s ease;
-        }
-
-        section:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         h2 {
-            color: #006400;
-            font-size: 40px;
-            text-align: center;
+            color: #006400; /* Verde oscuro */
+            font-family: 'Merriweather', serif;
+            font-size: 32px;
             margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 18px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li i {
+            margin-right: 10px;
+            color: #66b3a5; /* Verde suave */
         }
 
         .cta-button {
             display: inline-block;
-            background-color: #4CAF50;
+            background-color: #66b3a5; /* Verde suave */
             color: white;
-            padding: 20px 40px;
-            text-decoration: none;
+            padding: 15px 30px;
             font-size: 20px;
+            text-decoration: none;
             border-radius: 5px;
-            margin-top: 20px;
             text-align: center;
             transition: background-color 0.3s ease;
         }
 
         .cta-button:hover {
-            background-color: #45a049;
+            background-color: #4c8c99; /* Azul claro */
         }
 
         .services-cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
         }
 
         .service-card {
             background-color: #fff;
-            padding: 30px;
+            width: 30%;
+            margin: 15px;
+            padding: 25px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
         }
 
         .service-card h3 {
-            font-size: 24px;
-            color: #006400;
+            font-size: 22px;
+            color: #4c8c99; /* Azul claro */
             margin-bottom: 15px;
         }
 
@@ -143,19 +152,42 @@
             color: #555;
         }
 
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 30px 0;
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto;
         }
 
-        footer p {
+        .form-container input, .form-container textarea {
+            padding: 15px;
             font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #66b3a5;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #4c8c99;
+        }
+
+        footer {
+            background-color: #006400; /* Verde oscuro */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
         }
 
         footer a {
-            color: #4CAF50;
+            color: #66b3a5; /* Verde suave */
             text-decoration: none;
         }
 
@@ -163,137 +195,87 @@
             text-decoration: underline;
         }
 
-        .form-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        input, textarea {
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            font-size: 16px;
-            width: 100%;
-        }
-
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        /* Responsividad */
         @media (max-width: 768px) {
             .services-cards {
-                grid-template-columns: 1fr 1fr;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-card {
+                width: 80%;
             }
 
             header h1 {
-                font-size: 40px;
+                font-size: 32px;
             }
 
-            header p {
-                font-size: 18px;
+            nav a {
+                font-size: 16px;
+                padding: 10px 15px;
             }
         }
     </style>
-
-    <!-- Scripts para interactividad avanzada -->
-    <script>
-        // Animación para scroll suave
-        document.addEventListener("DOMContentLoaded", () => {
-            const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
-            smoothScrollLinks.forEach(link => {
-                link.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    const targetId = link.getAttribute("href").slice(1);
-                    const targetElement = document.getElementById(targetId);
-                    window.scrollTo({ top: targetElement.offsetTop - 50, behavior: "smooth" });
-                });
-            });
-        });
-    </script>
 </head>
 <body>
-
-    <!-- HEADER -->
     <header>
         <h1>CESS Salud Integral</h1>
-        <p>Atención integral en salud para tu bienestar. Implantes subdérmicos, cuidado de heridas, y más.</p>
+        <p>Atención profesional en salud, planificación familiar y más</p>
     </header>
 
-    <!-- NAVBAR -->
     <nav>
         <a href="#servicios">Servicios</a>
         <a href="#nosotros">Nosotros</a>
         <a href="#contacto">Contacto</a>
     </nav>
 
-    <!-- SECCIÓN DE SERVICIOS -->
     <div class="container">
         <section id="servicios">
             <h2>Servicios</h2>
-            <p>En CESS Salud Integral ofrecemos servicios especializados de salud, con un equipo de profesionales altamente capacitados.</p>
             <div class="services-cards">
-               <div class="service-card">
+                <div class="service-card">
                     <h3>Implante y Explante de Dispositivo Subdérmico</h3>
-                    <p>Colocación y extracción de dispositivos subdérmicos de planificación familiar, realizados por expertos en el área.</p>
+                    <p>Colocación y extracción de dispositivos subdérmicos de planificación familiar.</p>
                 </div>
                 <div class="service-card">
                     <h3>Tratamiento de Heridas Crónicas</h3>
-                    <p>Tratamiento profesional y personalizado para heridas crónicas, asegurando la mejor recuperación posible.</p>
+                    <p>Tratamientos efectivos para heridas que no sanan fácilmente.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Administración de Medicamentos a Domicilio</h3>
-                    <p>Ofrecemos administración de medicamentos especializados a domicilio, con la supervisión de enfermeros certificados.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Asesoría Médica y Planificación Familiar</h3>
-                    <p>Asesoría en métodos anticonceptivos y planificación familiar personalizada según tus necesidades de salud.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Curaciones Postquirúrgicas</h3>
-                    <p>Realizamos curaciones postquirúrgicas para acelerar la cicatrización y evitar infecciones.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Consultas Médicas Virtuales</h3>
-                    <p>Brindamos consultas médicas virtuales para atender a nuestros pacientes de manera cómoda y rápida desde su hogar.</p>
+                    <h3>Administración de Medicamentos</h3>
+                    <p>Administración de medicamentos a domicilio bajo supervisión profesional.</p>
                 </div>
             </div>
             <a href="#contacto" class="cta-button">Solicitar una Consulta</a>
         </section>
-
-        <!-- SECCIÓN DE NOSOTROS -->
         <section id="nosotros">
             <h2>Nosotros</h2>
-            <p>Somos un equipo altamente capacitado, comprometido con la salud de nuestros pacientes. Nuestro objetivo es brindar un servicio integral de calidad, enfocado en el bienestar y la satisfacción del paciente. Contamos con años de experiencia en el cuidado de la salud, con especialización en planificación familiar y atención domiciliaria.</p>
+            <p>CESS Salud Integral es un equipo de profesionales en salud con experiencia en el tratamiento de heridas, planificación familiar y atención integral. Brindamos servicios personalizados, cercanos y de alta calidad, adaptados a las necesidades de cada paciente. Nos destacamos por la calidez humana y la profesionalidad en cada atención.</p>
         </section>
 
-        <!-- SECCIÓN DE CONTACTO -->
         <section id="contacto">
             <h2>Contacto</h2>
-            <p>¿Tienes alguna pregunta o deseas más información? Completa el siguiente formulario y nos pondremos en contacto contigo a la brevedad.</p>
+            <p>Para agendar tu consulta o más información sobre nuestros servicios, por favor llena el formulario a continuación:</p>
+
             <div class="form-container">
-                <form action="/enviar" method="POST" id="contactForm">
-                    <input type="text" name="nombre" placeholder="Tu nombre" required>
-                    <input type="email" name="email" placeholder="Tu correo electrónico" required>
-                    <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
-                    <input type="submit" value="Enviar mensaje">
+                <form action="mailto:contacto@cesssalud.com" method="post" enctype="text/plain">
+                    <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                    <input type="email" name="email" placeholder="Tu Email" required>
+                    <input type="text" name="telefono" placeholder="Tu Teléfono" required>
+                    <textarea name="mensaje" placeholder="Describe tu solicitud o consulta" required></textarea>
+                    <input type="submit" value="Enviar Solicitud">
                 </form>
+            </div>
+
+            <div class="contact-info">
+                <p><strong>Teléfono:</strong> (123) 456-7890</p>
+                <p><strong>Email:</strong> contacto@cesssalud.com</p>
+                <p><strong>Dirección:</strong> Calle 123, Paz de Ariporo, Casanare</p>
             </div>
         </section>
     </div>
 
-    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2024 CESS Salud Integral | <a href="https://www.jointcommission.org">Avalado por la Joint Commission International</a></p>
-        <p><a href="mailto:info@cesssalud.com">info@cesssalud.com</a> | Teléfono: +57 300 123 4567</p>
+        <p>© 2024 CESS Salud Integral. Todos los derechos reservados. <br> <a href="mailto:contacto@cesssalud.com">contacto@cesssalud.com</a></p>
     </footer>
 
 </body>
